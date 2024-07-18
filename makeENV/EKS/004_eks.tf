@@ -21,6 +21,9 @@ module "eks" {
       cluster_name = var.cluster-name
       most_recent = true
     }
+    aws-ebs-csi-driver = {
+      most_recent = true
+    }
   }
 
   vpc_id                   = aws_vpc.vpc.id
@@ -34,7 +37,7 @@ module "eks" {
   eks_managed_node_groups = {
     green = {
       min_size     = 2
-      max_size     = 2
+      max_size     = 5
       desired_size = 2
 
       instance_types = ["m7i.large"]

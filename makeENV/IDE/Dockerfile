@@ -3,7 +3,7 @@ FROM linuxserver/code-server:4.90.3
 
 # ENV for Code-server (VSCode)
 ENV TZ="Asia/Seoul"
-ENV PUID=1000
+ENV PUID=0
 ENV PGID=1000
 
 # Make DIR for code-server
